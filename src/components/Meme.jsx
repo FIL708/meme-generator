@@ -1,24 +1,42 @@
+import data from "../memesData"
+
 export default function Meme() {
+
+    let imageUrl = data.data.memes[3].url
+
+    const drawMemeImage = () => {
+        const memesArray = data.data.memes
+        let i = Math.floor(Math.random() * memesArray.length )     
+        const url = memesArray[i].url
+        console.log(url);
+        
+    }
+
     return (
         <main className="meme">
-            <form action="" className="meme--form">
+            <div className="meme--form">
                 <div className="meme--inputs">
                     <input 
                         type="text" 
                         className="meme--input meme--topText"
-                            placeholder="Top text"
+                        placeholder="Top text"
                         />
                     <input 
                         type="text" 
                         className="meme--input meme--bottomText"
-                            placeholder="Bottom text"
+                        placeholder="Bottom text"
                         />
                 </div>
-                <button type="submit" className="meme--button">Get a new meme image 🖼</button>
-            </form>
+                <button 
+                className="meme--button"
+                onClick={drawMemeImage}
+                >
+                Get a new meme image 🖼
+                </button>
+            </div>
             <section className="meme--section">
                 <img 
-                    src="https://cdn.pixabay.com/photo/2022/08/09/16/19/sea-7375377_960_720.jpg" 
+                    src={imageUrl} 
                     alt="meme" 
                     loading="lazy"
                     className="meme--image" />

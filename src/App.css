@@ -70,9 +70,7 @@ header {
 }
 
 .meme--image {
-  height: 268px;
-  width: 477px;
-  object-fit: cover;
+  max-height: 500px;
 }
 
 .meme--text {
@@ -87,8 +85,8 @@ header {
 }
 
 .meme--topText {
-  top: 7%
+  top: 5%
 }
 .meme--bottomText {
-  bottom: 7%;
+  bottom: 5%;
 }

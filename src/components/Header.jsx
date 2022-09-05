@@ -8,8 +8,8 @@ export default function Header() {
                 alt="troll face"
                 width="40px"
                 className="header--icon" />
-            <h1 className="header--title">MemeGenerator</h1>
-            <h2 className="header--subtitle">React Course - Project 3</h2>
+            <h2 className="header--title">MemeGenerator</h2>
+            <h3 className="header--subtitle">React Course - Project 3</h3>
         </header>
     )
 }

@@ -3,10 +3,18 @@ export default function Meme() {
         <main className="meme">
             <form action="" className="meme--form">
                 <div className="meme--inputs">
-                    <input type="text" className="meme--input meme--topText"/>
-                    <input type="text" className="meme--input meme--bottomText"/>
+                    <input 
+                        type="text" 
+                        className="meme--input meme--topText"
+                            placeholder="Top text"
+                        />
+                    <input 
+                        type="text" 
+                        className="meme--input meme--bottomText"
+                            placeholder="Bottom text"
+                        />
                 </div>
-                <button type="submit" className="meme--button">Get a new meme image</button>
+                <button type="submit" className="meme--button">Get a new meme image 🖼</button>
             </form>
             <section className="meme--section">
                 <img 

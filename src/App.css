@@ -18,3 +18,73 @@ header {
   margin-left: auto;
   font-size: 12px;
 }
+
+.meme {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.meme--form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 50px auto;
+}
+
+.meme--inputs {
+  display: flex;
+  gap: 17px
+}
+
+.meme--input {
+  border:none;
+  padding: 10px;
+  height: 35px;
+  width: 230px;
+  border: 1px solid #d5d4d8;
+  border-radius: 5px;
+  color: #0d0d0d;
+  font-family: "Karla", sans-serif;
+  font-size: 12px;
+}
+
+.meme--button {
+  padding: 11px;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.meme--section {
+  position: relative;
+}
+
+.meme--image {
+  height: 268px;
+  width: 477px;
+  object-fit: cover;
+}
+
+.meme--text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 32px;
+  font-family: "Impact", sans-serif;
+  color: #fff;
+  -webkit-text-stroke: 2px black;
+  text-transform: uppercase;
+}
+
+.meme--topText {
+  top: 7%
+}
+.meme--bottomText {
+  bottom: 7%;
+}

@@ -1,14 +1,15 @@
+import { useState } from "react"
 import data from "../memesData"
 
 export default function Meme() {
 
-    let imageUrl = data.data.memes[3].url
+    const [memeImage, setMemeImage] = useState("")
 
     const drawMemeImage = () => {
         const memesArray = data.data.memes
         let i = Math.floor(Math.random() * memesArray.length )     
         const url = memesArray[i].url
-        console.log(url);
+        setMemeImage(url)
         
     }
 
@@ -36,7 +37,7 @@ export default function Meme() {
             </div>
             <section className="meme--section">
                 <img 
-                    src={imageUrl} 
+                    src={memeImage}
                     alt="meme" 
                     loading="lazy"
                     className="meme--image" />

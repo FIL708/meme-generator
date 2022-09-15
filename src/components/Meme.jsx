@@ -13,15 +13,23 @@ export default function Meme() {
 
     const [allMemeImage, setAllMemeImage] = useState(memesData)
 
-    const drawMemeImage = () => {
+    const drawMemeImage = (event) => {
         const memesArray = allMemeImage.data.memes
         let i = Math.floor(Math.random() * memesArray.length)
         const url = memesArray[i].url   
         setMeme(prevState => ({
             ...prevState,
-            randomImage: url
+            randomImage: url,
         }))
         
+    }
+
+    const printText = (event) => {
+        const {value, name} = event.target
+        setMeme(prevState => ({
+            ...prevState,
+            [name]: value
+        }))
     }
 
     return (
@@ -32,11 +40,17 @@ export default function Meme() {
                         type="text" 
                         className="meme--input meme--topText"
                         placeholder="Top text"
+                        name="topText"
+                        value={meme.topText}
+                        onChange={printText}
                         />
                     <input 
                         type="text" 
                         className="meme--input meme--bottomText"
                         placeholder="Bottom text"
+                        name="bottomText"
+                        value={meme.bottomText}
+                        onChange={printText}
                         />
                 </div>
                 <button 
@@ -52,8 +66,8 @@ export default function Meme() {
                     alt="meme" 
                     loading="lazy"
                     className="meme--image" />
-                <p className="meme--text meme--topText">Some text</p>
-                <p className="meme--text meme--bottomText">Some text</p>
+                <p className="meme--text meme--topText">{meme.topText}</p>
+                <p className="meme--text meme--bottomText">{meme.bottomText}</p>
             </section>
         </main>
     )

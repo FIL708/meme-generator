@@ -3,7 +3,7 @@ import { useState } from "react"
 
 export default function Meme() {
     
-    const [allMemeImage, setAllMemeImage] = useState({})
+    const [allMemeImage, setAllMemeImage] = useState([])
     
     useEffect(() => {
         console.log("fetch data");
